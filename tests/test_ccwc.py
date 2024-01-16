@@ -1,6 +1,7 @@
 import unittest
-from challenge_1_wc_tool.ccwc import (count_bytes_in_text, count_words_in_text, count_lines_in_text,
-                                      count_characters_in_text)
+from src.projects.challenge_1_wc_tool.ccwc import (count_bytes_in_text, count_words_in_text, count_lines_in_text,
+                                                   count_characters_in_text)
+
 
 class TestCCWC(unittest.TestCase):
     def test_count_bytes_in_text(self):
