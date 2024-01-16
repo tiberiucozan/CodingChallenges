@@ -1,5 +1,6 @@
 import unittest
-from ccwc import count_bytes_in_text, count_words_in_text, count_lines_in_text, count_characters_in_text
+from challenge_1_wc_tool.ccwc import (count_bytes_in_text, count_words_in_text, count_lines_in_text,
+                                      count_characters_in_text)
 
 class TestCCWC(unittest.TestCase):
     def test_count_bytes_in_text(self):
@@ -21,6 +22,7 @@ class TestCCWC(unittest.TestCase):
         text = "你好"
         char_count = count_characters_in_text(text)
         self.assertEqual(char_count, 2)  # Replace with the expected result
+
 
 if __name__ == '__main__':
     unittest.main()
