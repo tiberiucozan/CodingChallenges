@@ -8,14 +8,11 @@ importlib-metadata==4.6.4
 jeepney==0.7.1
 keyring==23.5.0
 launchpadlib==1.10.16
-lazr.restfulclient==0.14.4
 lazr.uri==1.0.6
 MarkupSafe==2.1.2
 more-itertools==8.10.0
 netifaces==0.11.0
-PyGObject==3.42.1
 pyparsing==2.4.7
-python-apt==2.4.0+ubuntu1
 PyYAML==5.4.1
 SecretStorage==3.3.1
 six==1.16.0
