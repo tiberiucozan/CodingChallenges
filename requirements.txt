@@ -3,7 +3,6 @@ dbus-python==1.2.18
 diagrams==0.23.3
 MarkupSafe==2.1.2
 pyparsing==2.4.7
-PyYAML==5.4.1
 systemd-python==234
 ubuntu-advantage-tools==8001
 
