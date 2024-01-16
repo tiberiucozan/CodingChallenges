@@ -1,0 +1,41 @@
+name: Performance Analysis
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  performance-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Environment
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-benchmark
+
+      - name: Run Time Performance Tests
+        run: |
+          cd /src/projects
+          find . -type f -name '*.py' ! -name '__init__.py' -exec sh -c 'time python3 "$0"' {} \;
+
+      - name: Run Performance Tests
+        run: |
+          # Run your performance tests or analysis scripts here
+          # Compare between commits or branches and collect results
+
+      - name: Report Results
+        uses: actions/github-script@v6
+        with:
+          script: |
+            # Use GitHub Script to create comments on the PR with performance results
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Performance results:\n\nYour results go here...'
+            })

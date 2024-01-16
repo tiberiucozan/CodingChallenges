@@ -16,5 +16,4 @@ Run `python3 ccwc.py -c text.txt`
 3. Run the command `ccwc -c text.txt`
 
 #### Method 3: (alias)
-Make an alias for the command `alias ccwc='python3 /full/path/to/ccwc.py'
-`
+Make an alias for the command `alias ccwc='python3 /full/path/to/ccwc.py'`
