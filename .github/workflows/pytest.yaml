@@ -24,4 +24,4 @@ jobs:
       - name: Run tests for all apps
         run: |
           # Use find and xargs to discover and execute tests for all subdirectories in "tests"
-          find tests -mindepth 1 -type d -print0 | xargs -0 -I {} sh -c 'echo "Running tests in {}"; cd {}; python -m unittest discover'
+          find tests -mindepth 1 -type d -exec sh -c 'echo "Running tests in {}"; cd {}; python -m unittest discover' \;
